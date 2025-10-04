@@ -17,7 +17,7 @@ def matchToTables(v, correlatingTable, doNotClear = None):
         strval = b.lower()
         localmatched = 0
         for i in range(len(lowerv)):
-            if strval[i] and strval[i] == lowerv[i]:
+            if strval[i] and lowerv[i] and strval[i] == lowerv[i]:
                 localmatched += 1
             else:
                 if localmatched > charactersMatched:
@@ -153,4 +153,5 @@ while True:
             if matchToTables(input("Return to menu?: "), datatables["Decision"]) == "Yes":
                 break
             else:
+
                 continue
