@@ -17,7 +17,7 @@ def matchToTables(v, correlatingTable, doNotClear = None):
         strval = b.lower()
         localmatched = 0
         for i in range(len(lowerv)):
-            if strval[i] and lowerv[i] and strval[i] == lowerv[i]:
+            if len(strval)-1 >= i and len(lowerv)-1 >= i and strval[i] == lowerv[i]:
                 localmatched += 1
             else:
                 if localmatched > charactersMatched:
@@ -54,7 +54,7 @@ while True:
         if sresponse == "Searching for a topic":
             while True:
                 searchResults = matchToTables(input("Value to find?: "), sheet1["Topic"], True)
-                responseToValue = matchToTables(input("Is {val} the value that you wanted to find?: ".format(val=searchResults)), datatables["Decision"])
+                responseToValue = matchToTables(input("Is \"{val}\" the value that you wanted to find?: ".format(val=searchResults)), datatables["Decision"])
                 if responseToValue == "Yes":
                     print("Search result: {val}".format(val=searchResults)); input()
                     if matchToTables(input("Return to menu?: "), datatables["Decision"]) == "Yes":
@@ -155,3 +155,4 @@ while True:
             else:
 
                 continue
+
