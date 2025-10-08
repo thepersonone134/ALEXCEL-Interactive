@@ -74,6 +74,7 @@ datatables = {
     "Types":["Physical","Digital"],
     "Subject":["Mathematics","Further Mathematics","Physics"],
     "Decision":["Yes","No"],
+    "Alphabet":["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
     "InitDecisions":["Spreadsheet","Name generator"],
     "sResponse":["Searching for a topic","Identify key areas of improvement"]
 }
